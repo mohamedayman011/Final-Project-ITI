@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | My Site 12</title>
+    <!-- image tap -->
+    <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon" />
+    <!-- normalize css -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- font Awesome css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- main css style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container" id="headerResp">
+        <div class="logo">
+          <a href="#" id="logo">Tote</a>
+          <a href="#">Funky Printed Bags </a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#shop" class="active">shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Gift Card</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-left">
+          <div class="search" id="parentSearch">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="search..." />
+          </div>
+          <div class="log-in">
+            <a href="#">
+              <i class="fa-solid fa-circle-user"></i>
+              log in
+            </a>
+          </div>
+          <div class="cart" id="openCart">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="counter">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="products" id="shop">
+      <div class="container"></div>
+    </section>
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="title">About</h2>
+        <p>
+          I'm a paragraph. Click here to add your own text and edit me. It’s
+          easy. Just click “Edit Text” or double click me to add your own
+          content and make changes to the font. I’m a great place for you to
+          tell a story and let your users know a little more about you.
+        </p>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="contact" id="contact">
+          <ul>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Store Policy</a></li>
+            <li><a href="#">Payment Methods</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="tel:123-456-7890">Tel:123-456-7890</a></li>
+            <li><a href="mailto:info@mysite.com">info@mysite.com</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy-right">
+        © 2035 by Tote. Powered and secured by <a href="#">Wix</a>
+      </div>
+    </footer>
+    <div class="cart-items" id="cart">
+      <div class="header-cart">
+        <p><span>Cart</span> (<span id="itemsNum">0</span> items)</p>
+        <button id="closeCart"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div id="bodyCart" class="body-cart">
+        <p>Your cart is empty.</p>
+      </div>
+      <div class="footer-cart">
+        <h4>Subtotal<span id="subtotal"></span></h4>
+        <p>Taxes and shipping are calculated at checkout.</p>
+        <button type="button" id="checkout">Checkout</button>
+        <button type="button" id="viewCart">View Cart</button>
+      </div>
+    </div>
+    <div class="social">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+    </div>
+    <script src="javaScript/main.js"></script>
+  </body>
+</html>
