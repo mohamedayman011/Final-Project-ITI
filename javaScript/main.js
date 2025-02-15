@@ -199,9 +199,7 @@ fetch("https://api.jsonbin.io/v3/b/67b0b12ead19ca34f804c406")
     // Change src of image on hover
     changeSrcImage(data);
   })
-  .catch((error) => {
-    console.log(error("error in response"));
-  });
+  .catch((error) => console.error("Error:", error));
 // verify local storage is not empty
 let itemsCart;
 if (localStorage.itemCart != null) {
