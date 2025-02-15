@@ -82,6 +82,7 @@ window.onload = () => {
   responsiveHeader();
   openCart();
   getItemsCart();
+  addClassActiveBtn();
   // input search
   let parentSearch = document.getElementById("parentSearch");
   let searchInput = document.getElementById("search");
@@ -175,7 +176,9 @@ fetch("https://api.jsonbin.io/v3/b/67b0b12ead19ca34f804c406")
           <div class="image">
             <img id="image_hover" src="./${product.img}" alt="${
         product.name
-      }"  onmouseover="changeSrcImageOver('${product.img_hover}', this)" onmouseout="changeSrcImageOut('${product.img}', this)">
+      }"  onmouseover="changeSrcImageOver('${
+        product.img_hover
+      }', this)" onmouseout="changeSrcImageOut('${product.img}', this)">
             ${
               product.sale
                 ? "<span>sale</span>"
@@ -195,7 +198,8 @@ fetch("https://api.jsonbin.io/v3/b/67b0b12ead19ca34f804c406")
             }, this)">Add To Cart</button>
           </div>
         </div>`;
-    });
+      });
+      addClassActiveBtn();
   })
   .catch((error) => console.error("Error:", error));
 // verify local storage is not empty
@@ -278,6 +282,9 @@ function removeItemFromCart(index) {
   itemsCart.splice(index, 1);
   localStorage.setItem("itemCart", JSON.stringify(itemsCart));
   getItemsCart();
+  addClassActiveBtn();
+}
+function addClassActiveBtn() {
   let btnsAddCart = document.querySelectorAll("#addToCart");
   for (let i = 0; i < btnsAddCart.length; i++) {
     btnsAddCart[i].classList.remove("active");
@@ -288,15 +295,15 @@ function removeItemFromCart(index) {
     });
   }
 }
+
 // Change src of image on hover
 
 function changeSrcImageOver(source, image) {
-  image.src = source
+  image.src = source;
 }
 function changeSrcImageOut(source, image) {
-  image.src = source
+  image.src = source;
 }
-
 
 let backBlur = document.createElement("div");
 backBlur.classList.add("background-blur");
