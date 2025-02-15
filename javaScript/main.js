@@ -1,4 +1,4 @@
-// counter items
+// Mohamed Ayman 
 let allProductsJson;
 let normalResponsive = `
         <div class="logo">
