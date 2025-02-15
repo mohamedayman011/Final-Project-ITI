@@ -168,8 +168,8 @@ let productContainer = document.querySelector("#shop .container");
 fetch("https://api.jsonbin.io/v3/b/67b0b12ead19ca34f804c406")
   .then((response) => response.json())
   .then((data) => {
-    allProductsJson = data;
-    data.forEach((product) => {
+    allProductsJson = data.record;
+    data.record.forEach((product) => {
       productContainer.innerHTML += `
               <div class="product">
           <div class="image">
