@@ -175,7 +175,7 @@ fetch("https://api.jsonbin.io/v3/b/67b0b12ead19ca34f804c406")
           <div class="image">
             <img id="image_hover" src="./${product.img}" alt="${
         product.name
-      }" data-id="${product.id}">
+      }"  onmouseover="changeSrcImageOver('${product.img_hover}', this)" onmouseout="changeSrcImageOut('${product.img}', this)">
             ${
               product.sale
                 ? "<span>sale</span>"
@@ -196,8 +196,6 @@ fetch("https://api.jsonbin.io/v3/b/67b0b12ead19ca34f804c406")
           </div>
         </div>`;
     });
-    // Change src of image on hover
-    changeSrcImage(data);
   })
   .catch((error) => console.error("Error:", error));
 // verify local storage is not empty
@@ -292,17 +290,13 @@ function removeItemFromCart(index) {
 }
 // Change src of image on hover
 
-function changeSrcImage(products) {
-  let imgHover = document.querySelectorAll("#image_hover");
-  imgHover.forEach((img) => {
-    img.addEventListener("mouseover", (ele) => {
-      ele.currentTarget.src = products[ele.currentTarget.dataset.id].img_hover;
-    });
-    img.addEventListener("mouseout", (ele) => {
-      ele.currentTarget.src = products[ele.currentTarget.dataset.id].img;
-    });
-  });
+function changeSrcImageOver(source, image) {
+  image.src = source
 }
+function changeSrcImageOut(source, image) {
+  image.src = source
+}
+
 
 let backBlur = document.createElement("div");
 backBlur.classList.add("background-blur");
